@@ -4,7 +4,6 @@ import { AuthContext } from '../context/AuthProvider/index'
 import { useRouter } from 'next/navigation'
 import React, { useContext } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 const Navbar = () => {
 
     const { user } = useContext(AuthContext)
