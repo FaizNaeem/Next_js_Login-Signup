@@ -1,9 +1,13 @@
 'use client'
 import signout from '@/confiq/Signout';
+// import firebase_app from "../confiq/Firestore";
+// import { getFirestore, doc, getDoc } from "../confiq/Firestore/firestore";
+
 import { AuthContext } from '../context/AuthProvider/index'
 import { useRouter } from 'next/navigation'
 import React, { useContext } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Navbar = () => {
 
     const { user } = useContext(AuthContext)

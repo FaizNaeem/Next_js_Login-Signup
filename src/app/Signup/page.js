@@ -16,17 +16,16 @@ export default  function siignup() {
     const { result, error } = await signUp(email, password)
               console.log('result, error->', result, error)
               if (result) {
-                const data = {
-                  name: 'John snow',
-                  house: 'Stark'
-                }
-                const { result, error } = await addData('users', 'user-id', data)
-            // if(result){
-
-              alert("Signup Success")
-            // }
-         
-                  // router.replace('/Login')
+              // alert("Signup Success")
+              const data = {
+                name: 'John snow',
+                house: 'Stark'
+              }
+              const { result, error } = await addData('users', 'user-id', data)
+          
+              if (error) {
+                return console.log(error)
+              }
               } else {
                   alert(error.message)
               }
