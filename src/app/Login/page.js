@@ -21,7 +21,6 @@ export default function Login() {
         }
     }
   return (
-
         <div style={{display:"flex",flexDirection:'column' ,alignItems:"center", 
     justifyContent:"center",border:"1px solid black" ,height:"100vh"}}>
 
