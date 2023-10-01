@@ -9,12 +9,12 @@ export default function Todo() {
   return (
     <div style={{height:"100vh"}}>
         <h1 style={{textAlign:"center" ,}}>hi</h1>
-        {/* <div  > */}
+    
         <div style={{display:"flex" , alignItems:"center", justifyContent:"center" ,height:"100vh", }}>
     <input type="email"   onChange={(e) => setInput(e.target.value)} className="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" style={{width:"300px"}}/>
   <button className='btn btn-success'>Add</button>
   </div>
-        {/* </div> */}
+    
     </div>
   )
 }
