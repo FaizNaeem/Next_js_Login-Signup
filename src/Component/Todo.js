@@ -4,6 +4,7 @@ import './Todo.css'
 import React from 'react'
 import { useState } from 'react'
 export default function Todo() {
+    const [Todo , setTodo] = useState([])
     const [input ,setInput]= useState('')
   return (
     <div style={{height:"100vh"}}>
