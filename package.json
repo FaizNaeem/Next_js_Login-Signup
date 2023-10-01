@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap": "^5.3.2",
     "firebase": "^10.4.0",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "swal": "^0.1.0"
   },
   "devDependencies": {
     "autoprefixer": "latest",
