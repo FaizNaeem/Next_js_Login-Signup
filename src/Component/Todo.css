@@ -1,0 +1,11 @@
+.form-control:focus ,.form-control{
+    box-shadow:  none;
+    border-color: #e5e7eb;
+    border-radius: 0px !important;
+
+}
+.btn{
+    border: none;
+    border-radius: 0px !important;
+  
+}
