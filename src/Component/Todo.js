@@ -15,6 +15,13 @@ export default function Faiz() {
 setTodo([...todo ,input])
 setInput("")
   }
+  const Edit=()=>{
+
+  }
+  const Delete=(i)=>{
+    const save = todo.filter((e,n) => i !==n);
+    setTodo(save);
+  }
   
   
   return (
@@ -38,14 +45,14 @@ setInput("")
             {/* <button className='btn btn-success' type='submit' onClick={Submit}>Edit</button> */}
           {/* )} */}
         </div>
-        {todo.map((e) => (
+        {todo.map((e,i) => (
           <ul className='row' >
             <h6 className=''>
            {e}
-              <button className='btn btn-sm hi btn-danger' onClick={}>
+              <button className='btn btn-sm hi btn-danger' onClick={()=>Delete(i)}>
                 <i className="fa-solid fa-trash"></i>
               </button>
-              <button className='btn btn-success btn-sm '>
+              <button className='btn btn-success btn-sm '  onClick={()=>Edit()}>
                 <i className="fa-solid fa-pen-to-square"></i>
               </button>
             </h6>
