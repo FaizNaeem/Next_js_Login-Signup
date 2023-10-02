@@ -27,10 +27,13 @@ export default function Faiz() {
       }
   }
 
-  const Edit=(i)=>{
-    setInput(todo[i]); // Set the input value to the item being edited
-        setedit(i); ;
-  }
+// ...
+const Edit=(i)=>{
+  setInput(todo[i]); // Set the input value to the item being edited
+  setedit(i); // Set the edit index to the item's index
+}
+// ...
+
   const Delete=(i)=>{
     const save = todo.filter((e,n) => i !==n);
     setTodo(save);
@@ -63,7 +66,7 @@ export default function Faiz() {
               <button className='btn btn-sm hi btn-danger' onClick={()=>Delete(i)}>
                 <i className="fa-solid fa-trash"></i>
               </button>
-              <button className='btn btn-success btn-sm '  onClick={()=>Edit(e)}>
+              <button className='btn btn-success btn-sm '  onClick={()=>Edit(i)}>
                 <i className="fa-solid fa-pen-to-square"></i>
               </button>
             </h6>
