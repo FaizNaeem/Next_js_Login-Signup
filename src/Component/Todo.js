@@ -11,23 +11,25 @@ import React, { useEffect, useState } from 'react';
 export default function Faiz() {
   const [ todo , setTodo]= useState([])
   const [input ,setInput]=useState('')
-  const
+  const [edit, setedit] = useState(null);
   const Submit = () => {
-setTodo([...todo ,input])
-setInput("")
+      if (edit !== null) {
+        // If an index is set, update the item at that index
+        const updatedTodo = [...todo];
+        updatedTodo[edit] = input;
+        setTodo(updatedTodo);
+        setInput('');
+        setedit(null);
+      } else {
+        // If no index is set, add a new item
+        setTodo([...todo, input]);
+        setInput('');
+      }
   }
-  const Edit=(e)=>{
-// const hello = todo.filter((e,i)=>{
-// if(n==i){
 
-// }
-// })
-const store = todo.find((ele) => e == ele);
-console.log(store);
-// setBtn(false);
-setInput(store);
-// Submit()
-// setSelect(e);
+  const Edit=(i)=>{
+    setInput(todo[i]); // Set the input value to the item being edited
+        setedit(i); ;
   }
   const Delete=(i)=>{
     const save = todo.filter((e,n) => i !==n);
@@ -50,11 +52,9 @@ setInput(store);
             aria-describedby="basic-addon1"
             onChange={(e) => setInput(e.target.value)}
           />
-          {/* {btn ? ( */}
-            <button className='btn btn-success' type='submit' onClick={Submit}>Add</button>
-          {/* ) : ( */}
-            {/* <button className='btn btn-success' type='submit' onClick={Submit}>Edit</button> */}
-          {/* )} */}
+            <button className='btn btn-success' type='submit' onClick={Submit}>
+            {edit !== null ? 'Edit' : 'Add'}
+          </button>
         </div>
         {todo.map((e,i) => (
           <ul className='row' >
